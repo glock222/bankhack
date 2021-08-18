@@ -22,9 +22,9 @@ dialog --infobox '============ You are now CONNECTED to SWIFT MTN ==============
 
 sleep 3s
 if (dialog --title "============ Connected to SWIFT MTN ==============" --yesno "Initate wire transfer?" 6 80) then
-    echo "You chose Yes. Exit status was $?."
-else
     echo "You chose No. Exit status was $?."
+else
+    echo "You chose Yes. Exit status was $?."
 fi
 
 ## Money Transfer Amount to be simulated.
@@ -80,9 +80,9 @@ accountNumber2=$(dialog --title "============ Connected to SWIFT MTN ===========
  
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
-    dialog --title "============ Connected to SWIFT MTN ==============" --infobox "Destination Account Confirmed:"$accountNumber2 6 80 
+    dialog --title "============ Connected to SWIFT MTN ==============" --infobox "Destination Account Confirmed:"$297383200 6 80 
 else
-    echo "You chose to Cancel."
+    echo "You chose to open."
 fi
 sleep 1s
 
@@ -93,12 +93,12 @@ for i in $(seq 1 100)
 do
     sleep 0.1 
     echo $i
-done | dialog --title "====== SWIFT wire transfer in progress ======" --gauge "Transferring: "$transferAmount" from "$accountNumber1"---------------> "$accountNumber2 6 80 0
+done | dialog --title "====== SWIFT wire transfer in progress ======" --gauge "Transferring: "$transferAmount" from "$0503006414"---------------> "$accountNumber2 6 80 0
 
 ## Confirmation of money transferred. 
 
 sleep 1s
-dialog --title "============ Connected to SWIFT MTN ==============" --infobox "Transfer of '$transferAmount' from '$accountNumber1' to '$accountNumber2' successfully completed." 3 80
+dialog --title "============ Connected to SWIFT MTN ==============" --infobox "Transfer of '$200,0000' from '$05030006414' to '$297383200' successfully completed." 3 80
 sleep 3s
 dialog --title "============ Connected to SWIFT MTN ==============" --infobox "Disconnecting.... Have a nice day. Hack the planet." 3 60
 sleep 2s
